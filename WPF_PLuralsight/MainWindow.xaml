@@ -12,7 +12,7 @@
             <RowDefinition Height="*" />
             <RowDefinition Height="2*" />
             <RowDefinition Height="2*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -25,13 +25,14 @@
         <Rectangle Fill="AntiqueWhite" Grid.Row="1" Grid.Column="1"></Rectangle>
         <Rectangle Fill="Aqua" Grid.Row="2"></Rectangle>
         <Rectangle Fill="Azure" Grid.Row="3" Grid.Column="3"></Rectangle>
-        <Rectangle Fill="Beige" Grid.Row="4"></Rectangle>
+        <Rectangle  Grid.Row="4"></Rectangle>
         <Rectangle Fill="Chocolate" Grid.Row="5" Grid.Column="5"></Rectangle>
 
         <Label 
-            Content=" Welcome to the treasure island "
+            Content=" Welcome to the treasure island"
             Grid.Row="4"
             FontSize="25"
+            Grid.ColumnSpan="6"
             >
         </Label>
         
