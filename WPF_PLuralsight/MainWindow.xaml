@@ -10,31 +10,124 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="2*" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-
+<!-- Columns -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="2*" />
         </Grid.ColumnDefinitions>
-        
-        <Rectangle Fill="AliceBlue" Grid.Row="0"></Rectangle>
-        <Rectangle Fill="AntiqueWhite" Grid.Row="1" Grid.Column="1"></Rectangle>
-        <Rectangle Fill="Aqua" Grid.Row="2"></Rectangle>
-        <Rectangle Fill="Azure" Grid.Row="3" Grid.Column="3"></Rectangle>
-        <Rectangle  Grid.Row="4"></Rectangle>
-        <Rectangle Fill="Chocolate" Grid.Row="5" Grid.Column="5"></Rectangle>
+        <!--  Forms-->
 
-        <Label 
-            Content=" Welcome to the treasure island"
-            Grid.Row="4"
-            FontSize="25"
-            Grid.ColumnSpan="6"
-            >
-        </Label>
+        <TextBlock Text="Full Name"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="5" 
+                   FontSize="25"/>
+        
+        <TextBox Grid.Column="1"
+                 Width="500"
+                 Height="40"
+                 FontSize="25"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Bottom" 
+                 Margin="5" />
+
+        <TextBlock Text="Sex"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="5" 
+                   FontSize="25"
+                   Grid.Row="1"/>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left">
+            <RadioButton GroupName="Sex" 
+                         Content="Male"
+                         VerticalAlignment="Center"
+                         Margin="5"
+                         IsChecked="True"
+                         FontSize="25">
+            </RadioButton>
+            <RadioButton GroupName="Sex"
+                         Content="Female"
+                         VerticalAlignment="Center"
+                         Margin="5"
+                         FontSize="25">
+            </RadioButton>
+            <RadioButton GroupName="Sex"
+                         Content="Transagender"
+                         VerticalAlignment="Center"
+                         Margin="5"
+                         FontSize="25">
+            </RadioButton>
+            
+                         
+        </StackPanel>
+
+        <TextBlock Text="Do You Own ?"
+                   Grid.Row="2"
+                   FontSize="25"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="5"/>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left">
+
+            <CheckBox Content="Desktop"
+                      Margin="5" 
+                      FontSize="25"/>
+            <CheckBox Content="Laotop"
+                      Margin="5" 
+                      FontSize="25"/>
+            <CheckBox Content="Tablet"
+                      Margin="5" 
+                      FontSize="25"/>
+        </StackPanel>
+
+        <TextBlock Text=" Your Job"
+                   Grid.Row="3"
+                   FontSize="25"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="5"/>
+
+        <ComboBox Grid.Row="3"
+                  Grid.Column="1" 
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Bottom"
+                  FontSize="25">
+            
+            <ComboBoxItem Content="Devloper"></ComboBoxItem>
+            <ComboBoxItem Content="Designer"></ComboBoxItem>
+            <ComboBoxItem Content="Manager"></ComboBoxItem>
+            <ComboBoxItem Content="CTO"></ComboBoxItem>
+            <ComboBoxItem Content="CEO"></ComboBoxItem>
+
+        </ComboBox>
+
+        <TextBlock Text=" Promise dilivery date "
+                   Grid.Row="4"
+                   FontSize="25"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Margin="5"/>
+
+        <Calendar Grid.Column="1" 
+                  HorizontalAlignment="Left" 
+                  Margin="5" 
+                  Grid.Row="4" 
+                  VerticalAlignment="Bottom"/>
         
     </Grid>
 </Window>
