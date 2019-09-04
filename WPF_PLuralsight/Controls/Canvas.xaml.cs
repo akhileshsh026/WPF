@@ -22,6 +22,7 @@ namespace WPF_PLuralsight.Controls
         public Canvas()
         {
             InitializeComponent();
+            DataContext = Person.GetPerson();
         }
     }
 }

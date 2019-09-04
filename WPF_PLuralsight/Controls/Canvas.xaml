@@ -7,6 +7,43 @@
         mc:Ignorable="d"
         Title="Canvas" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Name="_name"
+                   Text="{Binding Name}"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"
+                   Margin="5"/>
         
+        <TextBox Name="_name_enter"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center" 
+                 Grid.Column="1"
+                 Width="50"
+                 Margin="5" 
+                 Text="{Binding Name}"/>
+
+        <TextBlock Name="_title"
+                   Grid.Row="1"
+                   Text="{Binding Title}"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"
+                   Margin="5"/>
+
+        <TextBox Name="_title_enter"
+                 Grid.Column="1"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center" 
+                 Grid.Row="1"
+                 Width="50"
+                 Margin="5"
+                 Text="{Binding Title}"/>
     </Grid>
 </Window>
