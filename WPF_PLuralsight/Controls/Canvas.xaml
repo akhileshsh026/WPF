@@ -11,6 +11,9 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -18,7 +21,7 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Name="_name"
-                   Text="{Binding Name}"
+                   Text="Name"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Center"
                    Margin="5"/>
@@ -29,11 +32,11 @@
                  Grid.Column="1"
                  Width="50"
                  Margin="5" 
-                 Text="{Binding Name}"/>
+                 Text="{Binding Name, Mode=TwoWay}"/>
 
         <TextBlock Name="_title"
                    Grid.Row="1"
-                   Text="{Binding Title}"
+                   Text= "Title"
                    HorizontalAlignment="Right"
                    VerticalAlignment="Center"
                    Margin="5"/>
@@ -45,12 +48,46 @@
                  Grid.Row="1"
                  Width="50"
                  Margin="5"
-                 Text="{Binding Title}"/>
+                 Text="{Binding Title, Mode=TwoWay}"/>
         <Button Content="Save Changed"
                 Grid.Column="1"
                 Grid.Row="2"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Center"
                 Click="Button_Click"/>
+
+        <TextBlock Name="_name1"
+                   Text="Name"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"
+                   Margin="5"/>
+
+        <TextBox Name="_name_enter1"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top" 
+                 Grid.Row="3"
+                 Grid.Column="1"
+                 Width="50"
+                 Margin="5" 
+                 Text="{Binding Name, Mode=TwoWay}"/>
+
+        <TextBlock Name="_title1"
+                   Grid.Row="4"
+                   Grid.Column="0"
+                   Text= "Title"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"
+                   Margin="5"/>
+
+        <TextBox Name="_title_enter1"
+                 Grid.Column="1"
+                 Grid.Row="4"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top" 
+                 Width="50"
+                 Margin="5"
+                 Text="{Binding Title}"/>
     </Grid>
 </Window>
