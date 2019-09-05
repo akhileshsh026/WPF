@@ -19,10 +19,24 @@ namespace WPF_PLuralsight.Controls
     /// </summary>
     public partial class Canvas : Window
     {
+        private Person per;
         public Canvas()
         {
             InitializeComponent();
-            DataContext = Person.GetPerson();
+            per = new Person()
+            {
+                Name = "Aila",
+                Title = "Babes"
+            };
+
+            DataContext = per;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            per.Name = "Akhilesh";
+            per.Title = "Bro";
+
         }
     }
 }

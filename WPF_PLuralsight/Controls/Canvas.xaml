@@ -10,6 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -45,5 +46,11 @@
                  Width="50"
                  Margin="5"
                  Text="{Binding Title}"/>
+        <Button Content="Save Changed"
+                Grid.Column="1"
+                Grid.Row="2"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Click="Button_Click"/>
     </Grid>
 </Window>
