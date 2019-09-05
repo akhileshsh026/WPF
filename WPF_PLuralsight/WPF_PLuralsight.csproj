@@ -91,6 +91,7 @@
     <Compile Include="Controls\WrapPannel.xaml.cs">
       <DependentUpon>WrapPannel.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Employee.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

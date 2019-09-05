@@ -8,10 +8,6 @@
         Title="Canvas" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
-            <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
@@ -20,74 +16,24 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Name="_name"
-                   Text="Name"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Center"
-                   Margin="5"/>
-        
-        <TextBox Name="_name_enter"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Center" 
-                 Grid.Column="1"
-                 Width="50"
-                 Margin="5" 
-                 Text="{Binding Name, Mode=TwoWay}"/>
+        <ComboBox  Name="Employee"
+                   Height="50"
+                   Width="250"
+                   ItemsSource="{Binding}" >
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBox Name="name"
+                             Text="{Binding Name}">
+                        </TextBox>
+                        <TextBox Name="Title"
+                             Text="{Binding Title}">
+                        </TextBox>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
 
-        <TextBlock Name="_title"
-                   Grid.Row="1"
-                   Text= "Title"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Center"
-                   Margin="5"/>
+        </ComboBox>
 
-        <TextBox Name="_title_enter"
-                 Grid.Column="1"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Center" 
-                 Grid.Row="1"
-                 Width="50"
-                 Margin="5"
-                 Text="{Binding Title, Mode=TwoWay}"/>
-        <Button Content="Save Changed"
-                Grid.Column="1"
-                Grid.Row="2"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Center"
-                Click="Button_Click"/>
-
-        <TextBlock Name="_name1"
-                   Text="Name"
-                   Grid.Row="3"
-                   Grid.Column="0"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Top"
-                   Margin="5"/>
-
-        <TextBox Name="_name_enter1"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Top" 
-                 Grid.Row="3"
-                 Grid.Column="1"
-                 Width="50"
-                 Margin="5" 
-                 Text="{Binding Name, Mode=TwoWay}"/>
-
-        <TextBlock Name="_title1"
-                   Grid.Row="4"
-                   Grid.Column="0"
-                   Text= "Title"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Top"
-                   Margin="5"/>
-
-        <TextBox Name="_title_enter1"
-                 Grid.Column="1"
-                 Grid.Row="4"
-                 HorizontalAlignment="Left"
-                 VerticalAlignment="Top" 
-                 Width="50"
-                 Margin="5"
-                 Text="{Binding Title}"/>
     </Grid>
 </Window>

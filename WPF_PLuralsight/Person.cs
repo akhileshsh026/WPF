@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace WPF_PLuralsight
 {
@@ -35,6 +36,18 @@ namespace WPF_PLuralsight
                 Title = "Teacher"
             };
             return ak;
+        }
+
+        public static ObservableCollection<Person> GetPersons()
+        {
+            var persons = new ObservableCollection<Person>();
+            persons.Add(new Person() { Name = "Akhilesh" , Title = "DevOps" });
+            persons.Add(new Person() { Name = "Akhilesh", Title = "DevOps" });
+            persons.Add(new Person() { Name = "Akhilesh", Title = "DevOps" });
+            persons.Add(new Person() { Name = "Akhilesh", Title = "DevOps" });
+            persons.Add(new Person() { Name = "Akhilesh", Title = "DevOps" });
+
+            return persons;
         }
     }
 }
