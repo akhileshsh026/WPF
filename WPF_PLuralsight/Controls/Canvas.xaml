@@ -10,6 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -34,6 +35,16 @@
             </ComboBox.ItemTemplate>
 
         </ComboBox>
+
+        <StackPanel Grid.Row="2"
+                    Orientation="Vertical">
+            <Slider Name="mySlider"
+                    Minimum="0"
+                    Maximum="100"
+                    Width="300"/>
+            <TextBlock Margin="5"
+                       Text="{Binding Value,ElementName=mySlider}"/>
+        </StackPanel>
 
     </Grid>
 </Window>
